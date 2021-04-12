@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Cronômetro</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+
+    <style>
+        
+    </style>
+   
+    <body>
+        <h1>Cronômetro</h1>
+        
+        <input type="text" id="timer">
+        <button id="start">Iniciar</button>
+        <button id="pause">Pausar</button>
+        <button id="stop">Parar</button>
+
+
+        <script>
+          (function(){
+            var $timer = document.querySelector('#timer');
+            var $start = document.querySelector('#start');
+            var $pause = document.querySelector('#pause');
+            var $stop = document.querySelector('%stop');
+
+            
+            var centesimo = 0 ;
+            setInterval(function(){
+                $timer.value = ++centesimo
+            }, 10000)
+
+          })()
+            
+        </script>
+    </body>
+</html>

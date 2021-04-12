@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Aula Array - JavaScript 01</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+   
+    <body>
+        <div class="container">
+            <h1>Aula 01 - Array - JavaScript</h1>
+            
+            
+        </div>
+
+
+        <script>
+          
+                var arr = ['1', 2, 4, 5, 6, 'lais', 6];
+ 
+                var num = arr.every(function(element){
+                   
+                    return typeof element === 'number'
+                })
+                console.log(num);
+
+                var num1 = arr.some(function(element){
+                   
+                   return typeof element === 'number'
+               })
+               console.log(num1);
+
+               var num2 = arr.filter(function(element, index, arr){
+                   
+                   return typeof element === 'number'
+               })
+               console.log(num2);
+
+
+          
+        </script>
+    </body>
+</html>

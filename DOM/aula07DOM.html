@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular Média</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h1>Aula 07 - DOM - Problema</h1> 
+        </div>
+
+
+        <script>
+           var pessoa1 = {
+               nome: 'Alana',
+               sobrenome: 'Vanderwood'
+           };
+
+           var pessoa2= {
+                nome: 'Meena',
+                sobrenome: 'Peruzzo'
+           };
+
+           var pessoa3 = {
+               nome: 'Elena',
+               sobrenome: 'Baelfire'
+           };
+
+           for (var i = 1; i <= 3; i++){
+            console.log(window["pessoa"+i].nome + ' ' + window["pessoa"+i].sobrenome);
+           }
+        </script>
+    </body>
+</html>

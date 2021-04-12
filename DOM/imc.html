@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular IMC</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+    <body>
+        <script>
+            (function(){
+                function calcularIMC(peso, altura, callback){
+                    var IMC = peso / (altura * altura);
+                   
+                    if(callback && typeof callback === 'function'){
+                        return callback(IMC);
+                    }
+
+                    return IMC;
+                }
+
+                function resultIMC(IMC){     
+                    if(IMC <= 16.9){
+                        return 'Muito abaixo do peso';
+                    }else if(IMC <= 18.4){
+                        return 'Abaixo do peso';
+                    }else if(IMC <= 24.9){
+                        return 'Normal';
+                    }else if(IMC <= 29.9){
+                        return 'Acima do peso';
+                    }else if(IMC <= 34.9){
+                        return 'Obesidade Grau I';
+                    }else if(IMC <= 40){
+                        return 'Obesidade Grau II';
+                    }else{
+                        return 'Obesidade Grau III';
+                    }
+                }
+
+                var peso = 65;
+                var altura = 1.75;
+
+                var IMC = calcularIMC(peso, altura, resultIMC);
+
+                console.log('Classificação IMC: ', IMC);
+            }());
+        </script>
+
+        <h1>Calculadora IMC</h1>
+    </body>
+</html>

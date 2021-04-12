@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+        <h1>Lógica de Programação com Java Script</h1>
+        
+        <button onclick="mostrarTabuada()">Criar Tabuada</button>
+        <button onclick="limparTabuada()">Limpar Tabuada</button>
+
+        <div id="output"></div>
+        <script>
+
+            function mostrarTabuada(){
+                var n = prompt("Digite um número: ");  //perguntar numero usuario
+                
+                limparTabuada();
+                
+                n = parseFloat(n);                      //converter o número
+
+                var i = 1;                              //índice
+
+                while(i <= 1000){
+                    mensagem += n + ' x ' + i + ' = ' + (n*i) + '<br>';
+                    i++;
+                }
+
+                output.innerHTML = mensagem;
+            }
+
+            function limparTabuada(){
+                mensagem = '';
+                output.innerHTML = mensagem;   
+            }
+
+           
+
+            var output = document.querySelector('#output');
+
+            var mensagem = '';
+            
+            for(var i = 0; i < 1001; i++){
+                mensagem += 'i: ' + i + '<br>';
+            }
+
+            output.innerHTML = mensagem;
+
+        </script>
+    </body>
+</html>

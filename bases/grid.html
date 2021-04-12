@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Teste Grid</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+        
+        <style>
+            .gridContainer{
+                width: 300px;
+                background: #ccc;
+            }
+
+            .gridItem{
+                background: #999;
+                font-size: 2em;
+                font-family: sans-serif;
+                padding: 5px 15px;
+            }
+
+            .gridItem:nth-child(even){
+                background: #999;
+                color: white;
+            }
+
+            .gridItem:nth-child(odd){
+                background: #eee;
+            }
+
+            /* GRID */
+
+            .gridContainer{
+                display: grid;
+                grid-template-columns: 100px 100px 100px;
+                grid-template-rows: repeat(2, 100px);
+            }
+        </style>
+   
+    </head>
+    
+  
+    <body>
+       <h2>Grid Layout</h2>
+       
+       <div class="gridContainer">
+           <div class="gridItem">1</div>
+           <div class="gridItem">2</div>
+           <div class="gridItem">3</div>
+           <div class="gridItem">4</div>
+           <div class="gridItem">5</div>
+           <div class="gridItem">6</div>
+       </div>
+    </body>
+</html>

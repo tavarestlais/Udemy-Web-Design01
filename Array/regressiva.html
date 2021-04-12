@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Regresiva para Aniversário</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+   
+    <body>
+        <div class="container">
+            <h1>Contagem Regressiva para Aniversário</h1>
+            
+            
+        </div>
+
+
+        <script>
+          
+            (function(){
+                var data = new Date();
+                data.setDate(2);
+                data.setMonth(2);
+
+                var dia = data.getDate() < 10 ? '0' + data.getDate() : 
+                data.getDate(); 
+
+                var mes = data.getMonth()+1;
+                mes = mes < 10 ? '0' + mes : mes;
+
+                function formatData(data){
+                    '23/12/2020'
+                    return dia + '/' + mes + '/' + data.getFullYear;
+                }
+                console.log(formatDate(data))
+            })
+
+        </script>
+    </body>
+</html>

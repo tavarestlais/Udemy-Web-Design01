@@ -1,0 +1,52 @@
+h1{
+    font-family: Verdana, helvetica, sans-serif;
+    color: sienna;
+    text-align: center;
+    font-size: 40px;
+    width: 82%;
+    margin: auto ; 
+    padding: 10px 0 10px 0;
+    background-color: lightpink;
+       
+}
+
+body{
+    width: 80%;
+    margin: auto;
+    font-family: Verdana, helvetica, sans-serif;
+    color: #444; 
+}
+
+p{
+    width: 80%;
+    margin: 10px auto;
+    font-family: Verdana, helvetica, sans-serif;
+    color: #444; 
+    line-height: 30px;
+}
+
+h2{
+    font-size: 30px;
+    width: 80%;
+    margin: 20px auto 20px;
+    font-family: Verdana, helvetica, sans-serif;
+    color: sienna;
+    background-color: rosybrown;
+    padding: 10px;
+    border-bottom: solid 3px lightpink;
+}
+
+h3{
+    width: 80%;
+    margin: 10px auto;
+    font-family: Verdana, helvetica, sans-serif;
+    color: #444; 
+}
+
+li{
+    width: 80%;
+    margin: 10px auto;
+    font-family: Verdana, helvetica, sans-serif;
+    color: #444; 
+    line-height: 15px;
+}

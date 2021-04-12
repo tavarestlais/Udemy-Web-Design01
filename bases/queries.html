@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+        
+        <meta name="viewport" content="width=device-width">
+        
+        <style>
+            body{
+                background: red;
+                font-size: 16px;
+            }
+
+            @media screen and (min-width: 400px){
+                body{
+                    background: #ccc;
+                }   
+
+                .container div{
+                    width: 48%;
+                    float: left;
+                    margin: 1%
+                }
+            }
+
+            .container{
+                background: white;
+                padding: 15px;
+                width: 50%;
+                margin: 10px;
+                font-size: 24px;
+            }
+
+            .container div{
+                background: lightseagreen;
+                margin: 15px;
+                height: 150px;
+                width: 90%;
+                font-size: 22px;
+            }
+
+            .clearfix:after{
+                content: '';
+                display: block;
+                clear: both;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <h1>Página de Exemplo de Imagens</h1>
+        <a href="http:/youtube.com">Cursos Front-end</a>
+
+        <p>Um parágrafo qualquer</p>
+
+      
+        <div class="container clearfix" >
+            <div>Div 1</div>
+            <div>Div 2</div>
+        </div>
+
+
+    </body>
+</html>

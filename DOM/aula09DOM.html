@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular Média</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+   
+    <body>
+        <div class="container">
+            <h1>Aula 09 - DOM - Problema</h1>
+            
+            <form action="#" method="POST">
+                <label for="txtUser">Usuário </label><input type="text" id="txtUser" name="user"><br><br>
+                <label for="txtPassword">Senha </label><input type="password" id="txtPassword" name="pass"><br><br>
+                <button type="submit" id="btn">Login</button>
+            </form>
+        </div>
+
+
+        <script>
+            (function(){
+                'use strict';
+
+                var $txtUser = document.getElementById('txtUser');
+                var $txtPassword = document.getElementById('txtPassword');
+                var $btn = document.getElementById('btn');
+
+                $form.addEventListener('submit', function(e){
+                    
+                    if(!$txtUser.value || !$txtPassword.value){
+                        alert('Campo vazio! Preencha todos os campos');
+                        e.preventDefault(); //prvine o comportamento padrão do navegador = que é carregar outras páginas
+                    }
+                });
+            })()
+        </script>
+    </body>
+</html>

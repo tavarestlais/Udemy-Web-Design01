@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+        
+    <style>
+        body{
+            font-family: sans-serif;
+            padding: 0%;
+        }
+
+        
+        a{
+            display: block;
+            margin: 10px;
+            position: relative;
+            width: 370px;;
+            
+        }
+
+        a img{
+            max-width: 100%;
+            display: block;
+        }
+
+        a:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transition: all .5s;
+        }
+
+        a:hover:before{
+            background: rgba(0, 0, 0, .5);
+        }
+
+        a::after{
+            opacity: 0;
+        }
+
+        a:hover:after{
+            content: 'Veja mais';
+            display: block;
+            position: absolute;
+            border: 2px solid white;
+            border-radius: 8px;
+            color: white;
+            top: 50%;
+            left: 50%;
+            padding: 10px 20px;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+    </style>
+  
+    <body>
+       <h1>Estrutura básica</h1>
+
+        <section>
+            <article>
+                <a href="www.google.com" target="_blank">
+                    <img src="../projeto strata/thumbs/01.jpg">
+                </a>
+            </article>
+
+            <article>
+                <a href="#" target="_blank">
+                    <img src="../projeto strata/thumbs/02.jpg">
+                </a>
+            </article>
+
+            <article>
+                <a href="#" target="_blank">
+                    <img src="../projeto strata/thumbs/03.jpg">
+                </a>
+            </article>
+
+            <article>
+                <a href="#" target="_blank">
+                    <img src="../projeto strata/thumbs/04.jpg">
+                </a>
+            </article>
+
+            <article>
+                <a href="#" target="_blank">
+                    <img src="../projeto strata/thumbs/05.jpg">
+                </a>
+            </article>
+
+            <article>
+                <a href="#" target="_blank">
+                    <img src="../projeto strata/thumbs/06.jpg">
+                </a>
+            </article>
+        </section>
+
+    </body>
+</html>

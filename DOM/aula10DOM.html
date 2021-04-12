@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular Média</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+   
+    <body>
+        <div class="container">
+            <h1>Aula 09 - DOM - Problema</h1>
+            <textarea id="message" cols="50" rows="10" maxlength="100"></textarea>
+            <br>
+            <div id="remainContainer">
+
+            Restam <span id="remain"></span> caracteres.
+            </div>
+        </div>
+
+
+        <script>
+            (function(){
+               'use strict'; 
+
+                //área para trazer os elementos do mundo HTML para o JS
+
+               var $txtMessage = document.getElementById('message');
+               var $remainContainer = document.getElementById('remainContainer');
+               var $remain = document.getElementById('remain');
+
+                //fim da area de trazer dados
+
+               var max = $txtMessage.maxLength;
+
+               function showRemainingContainer(){
+                    $remainContainer.style.display = 'block';          //.alguma coisa, nesse caso style, vira um style inline
+               }    
+
+               showRemainingContainer();
+               showRemainingCaracter(max);
+
+               $txtMessage.addEventListener('input', checkLenght);
+
+                function checkLenght(e){
+                    var numTyped = this.value.length;
+                    var remainCaracter = parseInt(max) - parseInt(numTyped);
+                    
+                    showRemainingCaracter(remainCaracter);
+                }
+
+                function showRemainingCaracter(n){
+                    $remain.textContent = n;
+                }
+
+            })()
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular Média</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <body>
+        <script>
+            (function(){
+                function calcularMedia(){
+                    var media = 0;
+                    var total = 0;
+                    var qnt = arguments.length;     //retorna o numero de elementos passados por parâmetro
+                    var x = 0;
+
+                    while(typeof arguments[x] === 'number'){
+                        total += arguments[x];
+                        x++;
+                    }
+                    
+                    return total / qnt; //retorna direto a média
+                }
+
+                var media1 = calcularMedia(2, 3);
+                var media2 = calcularMedia(2, 3, 10, 6);
+                
+                console.log('media 1: ' +  media1);
+                console.log('media 2: ' +  media2);
+
+            })();
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exercício JS</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+       <script>
+           var num = new Array(31 ,4 ,65 ,76 ,8 ,21 ,54 ,23 ,19);
+
+           var soma = somaPares(num);
+
+           alert('A soma dos pares é de: ' + soma);
+
+           function somaPares(arr){
+                var soma = 0;
+            
+                for(var i = 0; i < arr.length; i++){         //criou um loop que soma i, que é o contador
+                    console.log(i);     
+                    console.log(arr[i]);
+
+                    if(!isNaN(arr[i]) && arr[i] % 2 === 0){
+                        soma += arr[i];
+                    }
+                }
+                return soma;
+           } 
+        </script>
+    </body>
+</html>

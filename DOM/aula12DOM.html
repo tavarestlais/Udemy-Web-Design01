@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular Média</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+   
+    <body>
+        <div class="container">
+            <button>Botão 1</button>
+            <button>Botão 2</button>
+            <button>Botão 3</button>
+            <button>Botão 4</button>
+        </div>
+
+
+        <script>
+            (function(){
+               'use strict';
+
+                var $btns=document.getElementsByTagName('button');
+
+                for(var i = 0; i< $btns.length;i++){
+                    $btns[i].addEventListener('click', clicou);
+                }
+
+                function clicou(){
+                    console.log(this.textContent);
+                }
+
+            })()
+        </script>
+    </body>
+</html>

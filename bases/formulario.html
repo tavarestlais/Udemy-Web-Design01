@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo formulário">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+    <style>
+        .formLogin{
+            width: 250px;
+            margin: 50px auto;
+            font-family: sans-serif;
+        }
+
+        .formLogin fieldset{
+            background-color: wheat;
+        }
+
+        .formLogin legend{
+            background-color: wheat;
+            display: inline-block;
+            padding: 10px;
+            border: solid 1px black;
+        }
+        .formLogin label{
+            display: block;
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+
+        #user, #pass, .btn{
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            }
+        #user, #pass{
+            background-color: turquoise;
+        }
+        
+        #user:focus, #pass:focus{
+            background-color: white;
+        }
+        .btn{
+            margin-top: 15px;
+        }
+        .btn:hover{
+            background-color: turquoise;
+        }
+
+        #user{
+            margin-bottom: 15px;
+        }
+
+    </style>
+  
+    <body>
+        <h1>Exemplo de Formulário</h1>
+        
+        <form action="#" method="POST" class="formLogin">
+            <fieldset>
+                <legend>Login</legend>
+
+                <label for="user">Usuário: </label>
+                <input type="text" name="user" id="user" autofocus>
+
+                <label for="pass">Senha: </label>
+                <input type="password" name="key" id="pass">
+                
+                <input type="submit" value="Logar" class="btn">
+            </fieldset>
+        </form>
+
+    </body>
+</html>

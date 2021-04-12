@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Banner Pop-up</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+
+    <style>
+        .banner{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 0 100px rgba(0, 0, 0, .8);
+            display: none;
+        }
+        .banner-close{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    </style>
+   
+    <body>
+        <h1>Banner Pop-up</h1>
+        <div class="banner">
+            <h2>Banner Irritante</h2>
+            <button class="banner-close">X</button>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium lectus vel tellus rutrum, ac posuere lectus 
+                aliquet. Donec ut vehicula mi. Etiam maximus vitae mauris vel ornare. Sed sed sodales nulla. Fusce laoreet metus 
+                tellus, vitae varius enim auctor eu. Nunc luctus rutrum tempor. Proin sit amet lorem interdum, vehicula erat rutrum, 
+                consectetur augue.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium lectus vel tellus rutrum, ac posuere lectus 
+                aliquet. Donec ut vehicula mi. Etiam maximus vitae mauris vel ornare. Sed sed sodales nulla. Fusce laoreet metus 
+                tellus, vitae varius enim auctor eu. Nunc luctus rutrum tempor. Proin sit amet lorem interdum, vehicula erat rutrum, 
+                consectetur augue.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium lectus vel tellus rutrum, ac posuere lectus 
+                aliquet. Donec ut vehicula mi. Etiam maximus vitae mauris vel ornare. Sed sed sodales nulla. Fusce laoreet metus 
+                tellus, vitae varius enim auctor eu. Nunc luctus rutrum tempor. Proin sit amet lorem interdum, vehicula erat rutrum, 
+                consectetur augue.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pretium lectus vel tellus rutrum, ac posuere lectus 
+                aliquet. Donec ut vehicula mi. Etiam maximus vitae mauris vel ornare. Sed sed sodales nulla. Fusce laoreet metus 
+                tellus, vitae varius enim auctor eu. Nunc luctus rutrum tempor. Proin sit amet lorem interdum, vehicula erat rutrum, 
+                consectetur augue.
+            </p>
+        
+        </div>
+
+
+        <script>
+          (function(){
+             
+            var $banner = document.querySelector('.banner');
+            var $bannerBtn = document.querySelector('.banner-close');
+            
+            $bannerBtn.addEventListener('click', hideBanner);
+
+            function showBanner(){
+                $banner.style.display = 'block';
+
+                intervaloHide = setTimeout(hideBanner, 4000);
+            }
+            function hideBanner(){ //executada dps de 10 segundos
+                $bannerBtn.removeEventListener('click', hideBanner); //removi o evento de click
+                $banner.parentNode.removeChild($banner);
+
+                clearTimeout(intervaloHide);
+            }
+
+            setTimeout(showBanner, 5000);
+            setTimeout(hideBanner, 10000)
+
+          })
+            
+        </script>
+    </body>
+</html>

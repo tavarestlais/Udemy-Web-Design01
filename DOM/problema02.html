@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular IMC</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+    <body>
+        <h1>Problema 02</h1>
+
+        <input type="text" id="txtnome">
+        <button onclick="escreve()">Clique Aqui</button>
+        <div id="msg"></div>
+
+        <script>
+
+            var txtnome2;
+
+            (function(){        //funcao autoinvocável
+                'use strict';
+                txtnome2 = document. querySelector('#txtnome');
+                var nome = txtnome2.value;
+                document.querySelector('#msg').innerHTML = "Bem vindo, <b>" + nome + "</b>";
+
+            })();
+        </script>
+    </body>
+</html> 

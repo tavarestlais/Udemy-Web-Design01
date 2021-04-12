@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exercício JS</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+        <h1>Lógica de Programação - JavaScript</h1>
+
+        <div id="output"></div>
+
+       <script>
+          var produto1 = new Object();
+
+          produto1.nome = "caneta";
+          produto1.quant = 2.2;
+          produto1.preco = 10;
+
+          produto1.comprar = function(qtd){     //criação de um método
+
+                if(!qtd){       //se nenhuma quantidade for passada por parâmtro, presume-se que comrpou ao menos 1 unidade
+                    qtd = 1;
+                }
+                console.log('Comprou caneta');
+                this.estoque -= qtd;
+                console.log(this.estoque); //this se refere ao objeto
+            }
+
+            var msg = '';
+
+            msg += 'Produto: ' + produto1.nome + '<br>';
+            msg += 'Quantidades disponíveis: ' + produto1.quant + '<br>';
+            msg += 'Preço: ' + produto1.preco + '<br>';
+
+            document.querySelector('#output').innerHTML = msg;
+
+        </script>
+    </body>
+</html>

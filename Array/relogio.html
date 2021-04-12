@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Relógio</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+
+    <style>
+        
+    </style>
+   
+    <body>
+        <h1>Relógio</h1>
+        <div class="clock">
+         
+        </div>
+
+
+        <script>
+          (function(){
+             var $clock = document.querySelector('.clock');
+
+             function getHour(){
+                 var data =  new Date();
+                 var hour = formata(data.getHours());
+                 var minutes = formata(data.getMinutes());
+                 var secs = formata(data.getSeconds());
+
+                 return hour + ':' + minutes + ':' + secs;
+
+             }
+
+             function formata(t){
+                 return t < 10 ? '0' + t : t;
+             }
+
+             function showclock(present){
+                $clock.textContent = present;
+             }
+             
+             showclock(getHour());
+             
+             setInterval(function(){
+                showclock(getHour());
+             }, 1000)
+
+          })()
+            
+        </script>
+    </body>
+</html>

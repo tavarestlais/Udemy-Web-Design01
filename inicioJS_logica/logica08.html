@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+        <h1>Lógica de Programação com Java Script</h1>
+        
+        
+        <div id="output"></div>
+        
+        <button onclick="mostrarAreaAlert()">Mostrar Área num alert</button>
+
+        <button onclick="mostrarAreaOutput()">Mostrar Área no Output</button>
+
+       <script>
+
+           
+           function mostrarAreaAlert(){
+
+                var largura = prompt('Digite a largura: ');
+                largura = parseFloat(largura);
+
+                var altura = prompt('Digite a altura: ');
+                altura =  parseFloat(altura);
+
+                try{
+                    var area = calcularArea(largura, altura);
+                } catch(e){
+                    area = e
+                }
+                
+                alert('A área total é de: '+ area);
+           }
+
+           function mostrarAreaOutput(){
+
+                var largura = prompt('Digite a largura: ');
+                largura = parseFloat(largura);
+
+                var altura = prompt('Digite a altura: ');
+                altura =  parseFloat(altura);
+                
+                try{
+                var area = calcularArea(largura, altura);
+                } catch(e){
+                    area = e;
+                }
+
+                document.querySelector('#output').innerHTML = 'A área total é de ' + area;
+            }
+
+            function calcularArea(l, a){  //recebe a largura e a latura e retorna o calculo efetuado
+                
+                if(l === undefined || a === undefined){
+                    throw new Error('Precisa receber dois números!');
+                }
+
+                if(isNaN(l) || isNaN(a)){
+                    throw new Error('Apenas números!')
+                }
+                
+                return l * a;
+            }
+
+       </script>
+    </body>
+</html>

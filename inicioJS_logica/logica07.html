@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+        <h1>Lógica de Programação com Java Script</h1>
+        
+        <button onclick="iniciarCalculo('+')">+</button>
+        <button onclick="iniciarCalculo('-')">-</button>
+        <button onclick="iniciarCalculo('*')">*</button>
+        <button onclick="iniciarCalculo('/')">/</button>
+
+        <div id="output"></div>
+       
+       <script>
+           var n1 = prompt('Digite um número: ');
+               n1 = parseFloat(n1);
+
+           escreve(n1);
+
+           function iniciarCalculo(simbolo){
+               var n1 = document.querySelector('#output').textContent;
+                n1 = parseFloat(n1);        //tem que converter em nuemro novamente o número chamado lá do output
+
+               var n2 = prompt('Digite outro número: ');
+                n2 = parseFloat(n2);
+
+               try{
+                    var msg = calcular(simbolo, n1, n2);
+               }catch(e){       //e de erro
+                    alert(e);
+                    return;
+               }
+               
+               
+
+               escreve(msg);
+           }
+
+            function escreve(mensagem){
+                var output = document.querySelector('#output');
+                output.innerHTML = mensagem;
+            }
+            
+           function calcular(simbolo, n1, n2){
+
+            if(simbolo !== '+' && simbolo !== '-' && simbolo !== '*' && simbolo !== '/'){
+                throw new Error('Digite um símbolo válido!');
+                return 0;
+            }
+            
+            if(isNaN(n1) || isNaN(n2)){
+                alert('Somente números!');
+                return 0;
+            }
+                
+                var numeroCalculado = null;
+                numeroCalculado = parseFloat(numeroCalculado);
+
+               
+                switch(simbolo){
+                    case '+':
+                        numeroCalculado = n1 + n2;
+                        break;
+                    case '-':
+                        numeroCalculado = n1 - n2;
+                        break;
+                    case '*':
+                        numeroCalculado = n1 * n2;
+                        break;
+                    case '/':
+                        numeroCalculado = n1 / n2;
+                        break;                
+                }
+
+                return numeroCalculado;
+           }
+
+
+        </script>
+    </body>
+</html>

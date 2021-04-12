@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+        <h1>Lógica de Programação</h1>
+        
+        <script>
+            var num1 = prompt("1º jogador - Digite o número");
+            num1 = parseFloat(num1);
+
+            var num2 = prompt("2º jogador - Digite o número");
+            num2 = parseFloat(num2);
+            
+           if(num1 == num2){
+               alert("Empate!");
+           } else {
+            var nSorteado = parseInt( Math.random() *2); 
+
+            if(nSorteado === 0){
+                if(num1 < num2){
+                    alert("O jogador 1 ganhou");
+                } else{
+                    alert("O jogador 2 ganhou!");
+                }
+            } else{
+                if(num1 > num2){
+                    alert("O jogador 1 ganhou");
+                } else{
+                    alert("O jogador 2 ganhou!");
+                } 
+            }
+           }
+
+          
+        </script>
+    </body>
+
+</html>

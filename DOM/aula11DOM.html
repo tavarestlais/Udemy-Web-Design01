@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Exercício Calcular Média</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+
+    </head>
+   
+    <body>
+        <div class="container">
+           <h1>Aula Termos de Contrato</h1>
+           <form action="#">
+               <textarea id="contract" cols="50" rows="10" maxlength="100" readonly>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales tellus ut neque euismod imperdiet. 
+                Pellentesque neque ipsum, tristique eu accumsan sit amet, blandit sit amet mi. Sed cursus vulputate sapien, 
+                vitae ornare mauris fringilla id. Pellentesque a ornare sem, et dictum enim. Suspendisse feugiat ipsum ut dignissim 
+                laoreet. Nulla in varius massa, at tincidunt urna. Aenean condimentum tellus finibus, ultricies leo vitae, rhoncus eros.
+                 Duis vehicula condimentum ipsum sed rutrum. Aliquam erat volutpat.
+               </textarea>
+               <br>
+               <label>
+                   <input type="checkbox" id="chk" checked>Li e aceito os termos deste contrato.
+               </label>
+               <br>
+               <input type="submit" value="Continuar" id="btn">
+
+           </form>
+        </div>
+
+
+        <script>
+            (function(){
+               'use strict';
+                var $btn = document.getElementById('btn');
+                var $chk = document.getElementById('chk');
+
+                toggleBtn();
+
+                $chk.addEventListener('change', function(){
+                    toggleBtn();
+                });
+                function toggleBtn(){
+                    $btn.disabled =  !$chk.checked;
+                }
+            })()
+        </script>
+    </body>
+</html>

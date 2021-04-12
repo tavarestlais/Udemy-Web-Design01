@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+    <style>
+
+        @keyframes anda{
+            0%{
+                transform: translateX(0);
+                background: #ccc;
+            }
+
+            100%{
+                transform: translateX(400px);   
+            }
+        }
+
+        #anima-time div{
+            width: 80px;
+            height: 50px;
+            border: 2px solid red;
+            text-align: center;
+            margin: 10px;
+        }
+
+        #anima-time div:nth-child(1){
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+        }
+
+        #anima-time div:nth-child(2){
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-iteration-count: 4;
+            animation-direction: alternate;
+            animation-timing-function: ease-in-out;
+        }
+
+        #anima-time div:nth-child(3){
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-delay: 2s;
+        }
+
+        #anima-time div:nth-child(4){
+            
+            background: teal;
+            
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-delay: 2s;
+            animation-fill-mode: backwards;
+        }
+
+        #anima-time div:nth-child(5){
+            
+            background: teal;
+            
+            animation-name: anda;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+            animation-fill-mode: backwards;
+            animation-play-state: running;
+        }
+
+
+    </style>
+  
+    <body>
+        <h1>Animações</h1>
+
+        <p>
+            <code>
+                animation: name duration timing-function delay iteration-count direction fill-mode play-state
+            </code>
+        </p>
+        <div id="anima-time">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang ="pt-br">
+    <head>
+        <title> Página Exemplo Estrutura Base</title>
+        <meta charset="utf-8">
+        <meta name="author" content="Laís Tavares">
+        <meta name="description" content="modelo base">
+        <meta name="keyworlds" content="html, base, tecnologia, udemy">
+    </head>
+
+    <style>
+
+    </style>
+
+    <body>
+        <h1>Lógica de Programação</h1>
+        
+        <script>
+            var num = prompt("Digite um núemro: ");
+            num= parseFloat(num);
+
+            var indice=1;
+
+            while(indice<=1000){
+                document.write(num + ' x ' + indice + ' = ' + (num * indice) + '<br>');
+               
+
+                if(indice%10===0 && indice > 0){
+                    document.write('<hr>');
+                }
+
+                indice= indice + 1;
+            }
+
+            document.write('Saiu do Loop');
+        </script>
+    </body>
+
+</html>
